@@ -26,7 +26,8 @@ class ProjectController extends Controller
                 $photo = new ProjectImage();
                 $photo->project_id = $item->id;
                 $photo->image = $image;
-                $photo->save();}
+                $photo->save();
+            }
             }
         $item->save();
         return response(['status'=>true,'massage'=>'Project registered successfully']);
