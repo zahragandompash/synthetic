@@ -64,7 +64,7 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors','auth:api'], 'namespac
 Route::group(['prefix' => '/app', 'middleware' => ['cors'], 'namespace' => 'api\api'], function () {
     Route::group(['prefix' => '/front'], function () {
         //Contact Us
-        Route::get('/add/contact','ContactUsController@add');
+        Route::post('/add/contact','ContactUsController@add');
         //OurTeam
         Route::get('/list/team','OurTeamController@list');
         //Partner
