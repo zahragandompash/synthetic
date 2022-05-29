@@ -49,11 +49,11 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors','auth:api'], 'namespac
         Route::get('/list/partner','PartnerController@list');
 
         //Projects
-        Route::post('/add/partner','ProjectController@add');
-        Route::post('/edit/partner','ProjectController@edit');
-        Route::get('/delete/partner','ProjectController@delete');
-        Route::get('/delete/image/partner','ProjectController@deleteImage');
-        Route::get('/list/partner','ProjectController@list');
+        Route::post('/add/project','ProjectController@add');
+        Route::post('/edit/project','ProjectController@edit');
+        Route::get('/delete/project','ProjectController@delete');
+        Route::get('/delete/image/project','ProjectController@deleteImage');
+        Route::get('/list/project','ProjectController@list');
 
     });
 
