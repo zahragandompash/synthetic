@@ -25,7 +25,7 @@ class ProjectController extends Controller
                 $image = $path["path"];
                 $photo = new ProjectImage();
                 $photo->project_id = $item->id;
-                $photo->images = $image;
+                $photo->image = $image;
                 $photo->save();}
             }
         $item->save();
