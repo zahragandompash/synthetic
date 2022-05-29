@@ -29,31 +29,31 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors','auth:api'], 'namespac
         //user
         Route::post('/add/user','UserController@add');
         Route::post('/edit/user','UserController@edit');
-        Route::post('/delete/user','UserController@delete');
-        Route::post('/list/user','UserController@list');
+        Route::get('/delete/user','UserController@delete');
+        Route::get('/list/user','UserController@list');
         //Contact Us
-        Route::post('/delete/contact','ContactUsController@delete');
-        Route::post('/list/contact','ContactUsController@list');
+        Route::get('/delete/contact','ContactUsController@delete');
+        Route::get('/list/contact','ContactUsController@list');
         Route::post('/send/email/contact','ContactUsController@sendEmail');
 
         //OurTeam
         Route::post('/add/team','OurTeamController@add');
         Route::post('/edit/team','OurTeamController@edit');
-        Route::post('/delete/team','OurTeamController@delete');
-        Route::post('/list/team','OurTeamController@list');
+        Route::get('/delete/team','OurTeamController@delete');
+        Route::get('/list/team','OurTeamController@list');
 
         //Partner
         Route::post('/add/partner','PartnerController@add');
         Route::post('/edit/partner','PartnerController@edit');
-        Route::post('/delete/partner','PartnerController@delete');
-        Route::post('/list/partner','PartnerController@list');
+        Route::get('/delete/partner','PartnerController@delete');
+        Route::get('/list/partner','PartnerController@list');
 
         //Projects
         Route::post('/add/partner','ProjectController@add');
         Route::post('/edit/partner','ProjectController@edit');
-        Route::post('/delete/partner','ProjectController@delete');
-        Route::post('/delete/image/partner','ProjectController@deleteImage');
-        Route::post('/list/partner','ProjectController@list');
+        Route::get('/delete/partner','ProjectController@delete');
+        Route::get('/delete/image/partner','ProjectController@deleteImage');
+        Route::get('/list/partner','ProjectController@list');
 
     });
 
@@ -64,13 +64,13 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors','auth:api'], 'namespac
 Route::group(['prefix' => '/app', 'middleware' => ['cors'], 'namespace' => 'api\api'], function () {
     Route::group(['prefix' => '/front'], function () {
         //Contact Us
-        Route::post('/add/contact','ContactUsController@add');
+        Route::get('/add/contact','ContactUsController@add');
         //OurTeam
-        Route::post('/list/team','OurTeamController@list');
+        Route::get('/list/team','OurTeamController@list');
         //Partner
-        Route::post('/list/partner','PartnerController@list');
+        Route::get('/list/partner','PartnerController@list');
         //Projects
-        Route::post('/list/project','ProjectController@list');
+        Route::get('/list/project','ProjectController@list');
     });
 
 });

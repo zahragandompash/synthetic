@@ -26,10 +26,10 @@ class Controller extends BaseController
     }
 
     public function senEmail($email, $token){
-        $headers = 'From:no-reply@synthetic-solutions';
+        $headers = 'From:no-reply@Synthetic-Solutions';
         $to_email = $email;
-        $subject = 'synthetic-solutions';
-        $message = 'synthetic-solutions verify Code : ' . $token;
+        $subject = 'Synthetic Solutions';
+        $message = 'Synthetic Solutions verify Code : ' . $token;
         Mail($to_email, $subject, $message, $headers);
     }
     public function uploadFile($file, $basePath){
