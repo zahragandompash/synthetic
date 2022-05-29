@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api\admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\OurTeamEditRequest;
 use App\Http\Requests\OurTeamRequest;
 use App\Models\OurTeam;
