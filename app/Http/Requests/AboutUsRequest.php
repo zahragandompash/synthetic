@@ -33,8 +33,8 @@ class AboutUsRequest extends FormRequest
     {
         return[
             'description.required'=>'Enter the description',
-            'title.required'=>'Enter the title',
-            'icon.required'=>'Enter the icon',
+            'title.required'=>'Enter the title of the profession',
+            'icon.required'=>'Enter the icon of the profession ',
             'icon.mimes' =>'Only icons in jpg, png, jpeg, svg format can be uploaded',
             'icon.max' => 'Reduce icon size',
 
