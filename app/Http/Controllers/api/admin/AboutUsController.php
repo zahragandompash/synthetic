@@ -23,12 +23,12 @@ class AboutUsController extends Controller
             $profession->icon=$image;
         }
         $profession->save();
-        return \request(['status'=>true,'message'=>'About us successfully registered']);
+        return response(['status'=>true,'message'=>'About us successfully registered']);
     }
     public function edit(AboutUsEditRequest $request){
         $item=AboutUs::find($request->about_id);
         $item->description=$request->description;
-        return \request(['status'=>true,'message'=>'About us was successfully edited']);
+        return response(['status'=>true,'message'=>'About us was successfully edited']);
 
     }
 
@@ -36,7 +36,7 @@ class AboutUsController extends Controller
     {
         $item=OurProfession::find($request->id);
         $item->delete();
-        return \request(['status'=>true,'message'=>'Profession successfully removed']);
+        return response(['status'=>true,'message'=>'Profession successfully removed']);
 
     }
     public function list(){
