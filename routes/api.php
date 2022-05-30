@@ -76,6 +76,9 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors'], 'namespace' => 'api\
         Route::get('/list/partner','PartnerController@list');
         //Projects
         Route::get('/list/project','ProjectController@list');
+        // About us
+        Route::get('/list/about','AboutUsController@list');
+
     });
 
 });
