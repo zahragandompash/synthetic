@@ -55,6 +55,11 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors','auth:api'], 'namespac
         Route::get('/delete/image/project','ProjectController@deleteImage');
         Route::get('/list/project','ProjectController@list');
 
+        // About us
+        Route::post('/add/about','AboutUsController@add');
+        Route::post('/edit/about','AboutUsController@edit');
+        Route::get('/list/about','AboutUsController@list');
+        Route::get('/delete/profession/about','AboutUsController@deleteteProfession');
     });
 
 });
