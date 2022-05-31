@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\api\api;
-
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Controller\api\api;
 use App\Models\AboutUs;
 use App\Models\OurProfession;
 use Illuminate\Http\Request;
@@ -11,7 +9,7 @@ use Illuminate\Http\Request;
 class AboutUsController extends Controller
 {
     public function list(){
-        $item=AboutUs::all('description');
+        $item=AboutUs::all();
         $profession=OurProfession::all();
         return[
             'status'=>true,
