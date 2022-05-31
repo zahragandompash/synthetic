@@ -40,7 +40,7 @@ class AboutUsController extends Controller
 
     }
     public function list(){
-        $item=AboutUs::all('description');
+        $item=AboutUs::all();
         $profession=OurProfession::all();
         return[
             'status'=>true,
