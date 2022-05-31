@@ -34,7 +34,7 @@ class Controller extends BaseController
     }
     public function uploadFile($file, $basePath){
         $basePath = $basePath."/";
-        $filename =time().".".$file->getClientOriginalExtension();
+        $filename =rand(100,9999).time().".".$file->getClientOriginalExtension();
         Storage::disk('public')->putFileAs($basePath,$file,$filename);
         return ['path' => 'storage/'.$basePath.$filename, 'name' => $filename];
 
