@@ -15,7 +15,7 @@ class ProjectsResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'project_id'=>$this->id,
+            'id'=>$this->id,
             'title'=>$this->title,
             'description'=>$this->description,
             'images'=>$this->Image()->get(),
