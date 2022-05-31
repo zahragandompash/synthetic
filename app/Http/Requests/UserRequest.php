@@ -25,13 +25,18 @@ class UserRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'email'=>'required'
+            'email'=>'required|unique:users',
+            'type'=>'required|in:user,admin',
+
         ];
     }
     public function messages(){
         return[
             'name.required'=>'Enter the name',
             'email.required'=>'Enter the email',
+            'email.unique'=>'Email is already registered',
+            'type.required'=>'Select the type',
+            'type.in'=>'Only user and admin values can be selected',
         ];
 
     }

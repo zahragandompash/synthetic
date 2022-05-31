@@ -14,6 +14,7 @@ class UserController extends Controller
         $item=new User();
         $item->name=$request->name;
         $item->email=$request->email;
+        $item->type=$request->type;
         $item->save();
         return \Response(['status' => true, "message" => "User registration completed successfully"]);
     }

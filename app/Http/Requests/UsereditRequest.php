@@ -27,7 +27,7 @@ class UsereditRequest extends FormRequest
         return [
             'user_id'=>'required',
             'name'=>'required',
-            'email'=>'required|unique:users',
+            'email'=>'required',
             'type'=>'required|in:user,admin'
 
         ];
