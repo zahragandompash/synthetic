@@ -18,6 +18,11 @@ class ProjectController extends Controller
         $item=new Project();
         $item->title=$request->title;
         $item->description=$request->description;
+        if ($request->icon){
+            $path = $this->uploadFile($request->icon, "Project");
+            $icon = $path["path"];
+            $item->icon=$icon;
+        }
         $item->save();
         if ($request->images){
             foreach ($request->images as $image) {
@@ -40,6 +45,11 @@ class ProjectController extends Controller
         $item=Project::find($request->project_id);
         $item->title=$request->title;
         $item->description=$request->description;
+        if ($request->icon){
+            $path = $this->uploadFile($request->icon, "Project");
+            $icon = $path["path"];
+            $item->icon=$icon;
+        }
         $item->save();
         if ($request->images){
             foreach ($request->images as $image) {

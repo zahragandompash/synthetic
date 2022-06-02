@@ -26,6 +26,7 @@ class ProjectRequest extends FormRequest
         return [
             'title'=>'required',
             'description'=>'required',
+            'icon'=>'required|mimes:jpg,png,jpeg,svg|max:2048',
             'images'=>'required|array',
             'images.*.'=>'mimes:jpg,png,jpeg,svg|max:2048'
 
@@ -36,6 +37,9 @@ class ProjectRequest extends FormRequest
         return[
             'title.required'=>'Enter the title',
             'description.required'=>'Enter the description',
+            'icon.required'=>'Enter the icon',
+            'icon.mimes' =>'Only icon in jpg, png, jpeg, svg format can be uploaded',
+            'icon.max' => 'Reduce icon size',
             'images.required'=>'Enter the images',
             'images.*.mimes' =>'Only images in jpg, png, jpeg, svg format can be uploaded',
             'images.*.max' => 'Reduce images size',

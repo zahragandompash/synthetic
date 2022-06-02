@@ -27,6 +27,7 @@ class ProjectEditRequest extends FormRequest
             'project_id'=>'required',
             'title'=>'required',
             'description'=>'required',
+            'icon'=>'nullable|mimes:jpg,png,jpeg,svg|max:2048',
             'images'=>'nullable|array',
             'images.*.'=>'mimes:jpg,png,jpeg,svg|max:2048'
 
@@ -37,6 +38,8 @@ class ProjectEditRequest extends FormRequest
         return[
             'title.required'=>'Enter the title',
             'description.required'=>'Enter the description',
+            'icon.mimes' =>'Only icon in jpg, png, jpeg, svg format can be uploaded',
+            'icon.max' => 'Reduce icon size',
             'images.*.mimes' =>'Only images in jpg, png, jpeg, svg format can be uploaded',
             'images.*.max' => 'Reduce images size',
         ];
