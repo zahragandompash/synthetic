@@ -60,6 +60,12 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors','auth:api'], 'namespac
         Route::post('/edit/about','AboutUsController@edit');
         Route::get('/list/about','AboutUsController@list');
         Route::get('/delete/profession/about','AboutUsController@deleteteProfession');
+
+        // future
+        Route::post('/add/future','FutureController@add');
+        Route::post('/edit/future','FutureController@edit');
+        Route::get('/delete/future','FutureController@delete');
+        Route::get('/list/future','FutureController@list');
     });
 
 });
@@ -78,6 +84,9 @@ Route::group(['prefix' => '/app', 'middleware' => ['cors'], 'namespace' => 'api\
         Route::get('/list/project','ProjectController@list');
         // About us
         Route::get('/list/about','AboutUsController@list');
+        // future
+        Route::get('/list/future','FutureController@list');
+
 
     });
 
