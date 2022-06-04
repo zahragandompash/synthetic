@@ -25,7 +25,7 @@ class FutureRequest extends FormRequest
     {
         return [
             'link'=>'required',
-            'logo'=>'required|mimes:jpg,png,jpeg,svg|max:2048'
+            'logo'=>'nullable|mimes:jpg,png,jpeg,svg|max:2048'
         ];
     }
 
@@ -33,7 +33,6 @@ class FutureRequest extends FormRequest
     {
         return[
 
-            'logo.required'=>'Enter the logo',
             'logo.mimes' =>'Only logo in jpg, png, jpeg, svg format can be uploaded',
             'logo.max' => 'Reduce logo size',
         ];
