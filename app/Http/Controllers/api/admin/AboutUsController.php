@@ -28,6 +28,7 @@ class AboutUsController extends Controller
     public function edit(AboutUsEditRequest $request){
         $item=AboutUs::find($request->about_id);
         $item->description=$request->description;
+        $item->save();
         return response(['status'=>true,'message'=>'About us was successfully edited']);
 
     }

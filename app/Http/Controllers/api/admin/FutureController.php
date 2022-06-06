@@ -21,7 +21,7 @@ class FutureController extends Controller
             $item->logo=$image;
         }
         $item->save();
-        return response(['status'=>true,'message'=>'Future registration completed successfully']);
+        return response(['status'=>true,'message'=>'Featured registration completed successfully']);
     }
 
     public function edit(FutureEditRequest $request)
@@ -35,7 +35,7 @@ class FutureController extends Controller
             $item->logo=$image;
         }
         $item->save();
-        return response(['status'=>true,'message'=>'Future editing completed successfully']);
+        return response(['status'=>true,'message'=>'Featured editing completed successfully']);
     }
 
     public function delete(Request $request)
@@ -43,7 +43,7 @@ class FutureController extends Controller
         $user=auth()->guard('api')->user();
         $item=Future::find($request->future_id);
         $item->delete();
-        return response(['status'=>true,'message'=>'Future removal completed successfully']);
+        return response(['status'=>true,'message'=>'Featured removal completed successfully']);
 
     }
 
